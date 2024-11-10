@@ -72,30 +72,117 @@ cd financial-app
 
 ```json
 {
-  "balance": {
-    "total": 5000.00,
-    "currency": "USD",
-    "lastUpdate": "2024-11-10T12:00:00Z"
-  },
-  "transactions": [
-    {
-      "id": "tr-001",
-      "description": "Ingreso Mensual",
-      "amount": 3000.00,
-      "type": "income",
-      "category": "salary",
-      "date": "2024-11-01T09:00:00Z"
-    }
-  ],
-  "kpis": {
-    "savingsRate": {
-      "value": 30,
-      "status": "good",
-      "target": 25,
-      "unit": "%"
-    }
+    "balance": 2150.00,
+    "income": 6000.00,
+    "expenses": 3850.00,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2024-10-01",
+        "description": "Salario",
+        "amount": 6000.00,
+        "type": "income",
+        "category": "Trabajo"
+      },
+      {
+        "id": 2,
+        "date": "2024-10-02",
+        "description": "Renta",
+        "amount": -1500.00,
+        "type": "expense",
+        "category": "Vivienda"
+      },
+      {
+        "id": 3,
+        "date": "2024-10-03",
+        "description": "Comestibles",
+        "amount": -200.00,
+        "type": "expense",
+        "category": "Alimentos"
+      },
+      {
+        "id": 4,
+        "date": "2024-10-04",
+        "description": "Trabajo Freelance",
+        "amount": 1000.00,
+        "type": "income",
+        "category": "Trabajo"
+      },
+      {
+        "id": 5,
+        "date": "2024-10-05",
+        "description": "Servicios Públicos",
+        "amount": -20.00,
+        "type": "expense",
+        "category": "Facturas"
+      },
+      {
+        "id": 6,
+        "date": "2024-10-06",
+        "description": "Restaurante",
+        "amount": -80.00,
+        "type": "expense",
+        "category": "Alimentos"
+      },
+      {
+        "id": 7,
+        "date": "2024-10-07",
+        "description": "Transporte",
+        "amount": -50.00,
+        "type": "expense",
+        "category": "Transporte"
+      },
+      {
+        "id": 8,
+        "date": "2024-10-08",
+        "description": "Curso Online",
+        "amount": -200.00,
+        "type": "expense",
+        "category": "Educación"
+      }
+    ],
+    "budgets": [
+      {
+        "category": "Vivienda",
+        "limit": 2000.00,
+        "spent": 1500.00
+      },
+      {
+        "category": "Alimentos",
+        "limit": 500.00,
+        "spent": 280.00
+      },
+      {
+        "category": "Transporte",
+        "limit": 200.00,
+        "spent": 50.00
+      },
+      {
+        "category": "Educación",
+        "limit": 300.00,
+        "spent": 200.00
+      }
+    ],
+   
+    "kpis": [
+      {
+        "name": "Tasa de Ahorro",
+        "value": 30,
+        "unit": "%"
+      },
+      {
+        "name": "Relación Deuda-Ingreso",
+        "value": 0.25,
+        "unit": "relación"
+      },
+      {
+        "name": "Cobertura del Fondo de Emergencia",
+        "value": 3,
+        "unit": "meses"
+      }
+    ]
   }
-}
+  
 ```
 
 ## 🎨 Personalización Visual
