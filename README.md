@@ -1,7 +1,9 @@
 # 📊 Financial App - Gestión Financiera Personal
 
 ## 🎯 Descripción
-Financial App es una aplicación web moderna y robusta diseñada para la gestión integral de finanzas personales. Ofrece visualizaciones en tiempo real, seguimiento detallado de transacciones y análisis de KPIs financieros, todo integrado en una interfaz intuitiva y responsive.
+Financial App es una aplicación web moderna y robusta diseñada para la gestión integral de finanzas personales. Este proyecto representa un recuerdo invaluable, no solo como una herramienta de monitoreo financiero, sino como una experiencia de aprendizaje práctica en el desarrollo web. A través de la creación de esta aplicación, hemos explorado las bases de HTML, CSS y JavaScript, además de aplicar el potencial de Bootstrap para un diseño responsivo y flexible.
+
+Financial App integra bibliotecas de visualización gráfica para ofrecer análisis de datos financieros en tiempo real, facilitando un seguimiento detallado de transacciones y el análisis de KPIs. Además de su valor técnico, este proyecto introduce a los usuarios al mundo de las finanzas personales, permitiendo un entendimiento más profundo de sus ingresos, gastos y objetivos financieros. Con una interfaz intuitiva y visualmente atractiva, la app ayuda a tomar decisiones financieras informadas. En resumen, Financial App es tanto una herramienta práctica de gestión de finanzas como una excelente introducción al desarrollo web y la programación front-end.
 
 ## ✨ Características Principales
 
