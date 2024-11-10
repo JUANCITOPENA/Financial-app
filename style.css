@@ -1,0 +1,394 @@
+:root {
+    --primary-bg: #1a1a2e;
+    --secondary-bg: #16213e;
+    --accent-color: #0f3460;
+    --text-color: #e0e0e0;
+    --success-color: #4caf50;
+    --warning-color: #ff9800;
+    --danger-color: #f44336;
+    --info-color: #2196f3;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.main-container {
+    width: 85%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+
+ /* Estilo de las imágenes del carrusel con borde radial animado */
+ .carousel-item img {
+    height: 384px;
+    object-fit: cover;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(22, 33, 62, 0.5);
+    position: relative;
+    z-index: 1;
+}
+
+/* Contenedor adicional para borde radial animado */
+.carousel-item .border-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 30px;
+    padding: 5px; /* Ancho del borde */
+    background: conic-gradient(from 0deg, #77faae, #ff8c8c, #8cb3ff, #f0e68c, #77faae);
+    animation: borderMove 5s linear infinite;
+    z-index: 0;
+}
+
+/* Animación del borde radial */
+@keyframes borderMove {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Posicionamiento del borde animado detrás de la imagen */
+.carousel-item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+h1, h2 {
+    margin-bottom: 1.5rem;
+}
+
+.card, .budget-card {
+    background-color: var(--secondary-bg);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 2rem;
+}
+
+.card:hover, .budget-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.bg-primary {
+    background-color: var(--info-color) !important;
+}
+
+.bg-success {
+    background-color: var(--success-color) !important;
+}
+
+.bg-danger {
+    background-color: var(--danger-color) !important;
+}
+
+.transaction-card {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+}
+
+.transaction-card .amount {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.transaction-card .amount.positive {
+    color: var(--success-color);
+}
+
+.transaction-card .amount.negative {
+    color: var(--danger-color);
+}
+
+/* Barra de progreso */
+.progress {
+    height: 25px;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-top: 0.75rem;
+    overflow: hidden;
+}
+
+.progress-bar {
+    position: relative;
+    height: 100%;
+    color: white;
+    font-weight: bold;
+}
+
+.progress-bar.bg-success {
+    background-color: #2ecc71;
+}
+
+.progress-bar.bg-warning {
+    background-color: #f39c12;
+}
+
+.progress-bar.bg-danger {
+    background-color: #e74c3c;
+}
+
+.percentage-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+}
+
+.table {
+    background-color: var(--secondary-bg);
+    color: var(--text-color);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table th, .table td {
+    border-color: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+}
+
+.kpi-status {
+    font-weight: bold;
+    padding: 0.25rem 0.5rem;
+    border-radius: 12px;
+}
+
+.kpi-status.good {
+    background-color: var(--success-color);
+    color: var(--text-color);
+}
+
+.kpi-status.warning {
+    background-color: var(--warning-color);
+    color: var(--primary-bg);
+}
+
+.kpi-status.bad {
+    background-color: var(--danger-color);
+    color: var(--text-color);
+}
+
+.chart-wrapper {
+    position: relative;
+    margin: auto;
+    height: 300px;
+}
+
+/* Estilos para las tarjetas de presupuesto */
+.budget-card {
+    background-color: var(--secondary-bg);
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 300px;
+    margin-bottom: 2rem;
+}
+
+.budget-title {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.budget-text {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+/* Barra de progreso específica para presupuesto */
+.budget-card .progress {
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.budget-card .progress-bar.bg-success {
+    background-color: var(--success-color);
+}
+
+.budget-card .progress-bar.bg-warning {
+    background-color: var(--warning-color);
+}
+
+.budget-card .progress-bar.bg-danger {
+    background-color: var(--danger-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-container {
+        width: 95%;
+    }
+
+    .card, .budget-card {
+        margin-bottom: 1rem;
+    }
+
+    .chart-wrapper {
+        height: 250px;
+    }
+}
+
+@media (max-width: 576px) {
+    .chart-wrapper {
+        height: 200px;
+    }
+}
+
+/* For larger screens like Smart TVs */
+@media (min-width: 1920px) {
+    .main-container {
+        max-width: 1800px;
+    }
+
+    body {
+        font-size: 18px;
+    }
+
+    .chart-wrapper {
+        height: 400px;
+    }
+}
+
+
+
+/* Estilos CSS actualizados */
+#budgetsContainer .card {
+    background-color: var(--dark-blue);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 100%;
+}
+
+#budgetsContainer .card-title {
+    color: var(--text-color);
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+#budgetsContainer .card-text {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Contenedor de la barra de progreso */
+#budgetsContainer .progress-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+/* Barra de progreso */
+#budgetsContainer .progress {
+    height: 35px; /* Altura aumentada */
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    overflow: visible; /* Importante para que el texto pueda sobresalir */
+    position: relative;
+}
+
+#budgetsContainer .progress-bar {
+    transition: width 0.3s ease;
+    height: 100%;
+    border-radius: 8px;
+}
+
+/* Colores de la barra */
+#budgetsContainer .progress-bar.bg-success {
+    background-color: #28a745;
+}
+
+#budgetsContainer .progress-bar.bg-warning {
+    background-color: #ffc107;
+}
+
+#budgetsContainer .progress-bar.bg-danger {
+    background-color: #dc3545;
+}
+
+/* Texto del porcentaje */
+#budgetsContainer .percentage-text {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.9rem;
+    font-weight: 600;
+    min-width: 60px; /* Asegura espacio suficiente para el texto */
+    text-align: center;
+    z-index: 1;
+}
+
+#budgetsContainer .text-white {
+    color: #ffffff;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+#budgetsContainer .text-dark {
+    color: #000000;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    #budgetsContainer .progress {
+        height: 30px;
+    }
+    
+    #budgetsContainer .percentage-text {
+        font-size: 0.85rem;
+    }
+    
+    #budgetsContainer .card-title {
+        font-size: 1.1rem;
+    }
+    
+    #budgetsContainer .card-text {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 1920px) {
+    #budgetsContainer .progress {
+        height: 40px;
+    }
+    
+    #budgetsContainer .percentage-text {
+        font-size: 1rem;
+    }
+    
+    #budgetsContainer .card-title {
+        font-size: 1.5rem;
+    }
+    
+    #budgetsContainer .card-text {
+        font-size: 1.3rem;
+    }
+}

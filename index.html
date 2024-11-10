@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/38921558?v=4&size=64" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finanzas Juancito HTML, CSS, JS, Chart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+</head>
+<body class="bg-dark text-light">
+    <main>
+        <div class="container-fluid py-4 main-container">
+            <header class="text-center mb-4">
+                <h1>📊 Finanzas Juancito 💰</h1>
+            </header>
+            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+            
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="5000">
+                        <div class="border-animation"></div>
+                        <img src="https://png.pngtree.com/thumb_back/fw800/back_our/20190625/ourmid/pngtree-individual-stocks-rise-and-fall-banner-design-image_261506.jpg" class="d-block w-100" alt="Imagen 1">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Mercado de Valores</h5>
+                            <p>Seguimiento de acciones en alza y baja.</p>
+                        </div>
+                    </div>
+            
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <div class="border-animation"></div>
+                        <img src="https://www.shutterstock.com/image-photo/banner-asian-business-man-hands-260nw-2363122463.jpg" class="d-block w-100" alt="Imagen 2">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Finanzas Corporativas</h5>
+                            <p>Tomando decisiones inteligentes para su empresa.</p>
+                        </div>
+                    </div>
+            
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <div class="border-animation"></div>
+                        <img src="https://png.pngtree.com/thumb_back/fw800/background/20191120/pngtree-financial-fashion-simple-stock-market-webpage-advertising-banner-background-image_322675.jpg" class="d-block w-100" alt="Imagen 3">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Economía Digital</h5>
+                            <p>Optimización de procesos financieros en línea.</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+            
+
+            <br>
+            <div class="row mb-4">
+               
+                <div class="col-md-4">
+                    <div class="card bg-success text-white">
+                        <div class="card-body">
+                            <h5 class="card-title">💵 Ingresos</h5>
+                            <h2 class="card-text" id="income"></h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-danger text-white">
+                        <div class="card-body">
+                            <h5 class="card-title">💸 Gastos</h5>
+                            <h2 class="card-text" id="expenses"></h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card bg-primary text-white">
+                        <div class="card-body">
+                            <h5 class="card-title">💼 Balance</h5>
+                            <h2 class="card-text" id="balance"></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">📊 Ingresos vs Gastos</h5>
+                            <div class="chart-wrapper">
+                                <canvas id="incomeExpensesChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">💰 Distribución de Gastos</h5>
+                            <div class="chart-wrapper">
+                                <canvas id="expensesDistributionChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section>
+                <h2 class="mb-3">📅 Transacciones Recientes</h2>
+                <div class="row" id="transactionsContainer"></div>
+            </section>
+
+            <section>
+                <h2 class="mt-4 mb-3">📊 Presupuestos</h2>
+                <div class="row" id="budgetsContainer"></div>
+            </section>
+
+            <section>
+                <h2 class="mt-4 mb-3">📈 KPIs</h2>
+                <div class="table-responsive">
+                    <table class="table table-dark table-striped">
+                        <thead>
+                            <tr>
+                                <th>Indicador</th>
+                                <th>Valor</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody id="kpiTableBody"></tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/chart.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
