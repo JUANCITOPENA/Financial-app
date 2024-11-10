@@ -28,19 +28,27 @@ header {
 }
 
 
- /* Estilo de las imágenes del carrusel con borde radial animado */
- .carousel-item img {
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    color: white; /* Color de texto blanco */
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Estilo para las imágenes */
+.carousel-item img {
     height: 384px;
+    width: auto;
     object-fit: cover;
     margin-top: 5px;
     margin-bottom: 20px;
     border-radius: 25px;
     box-shadow: 0 4px 10px rgba(22, 33, 62, 0.5);
     position: relative;
-    z-index: 1;
+    z-index: 1; /* Imagen sobre el borde */
 }
 
-/* Contenedor adicional para borde radial animado */
+/* Contenedor adicional para el borde animado */
 .carousel-item .border-animation {
     position: absolute;
     top: 0;
@@ -48,10 +56,10 @@ header {
     right: 0;
     bottom: 0;
     border-radius: 30px;
-    padding: 5px; /* Ancho del borde */
+    padding: 5px;
     background: conic-gradient(from 0deg, #77faae, #ff8c8c, #8cb3ff, #f0e68c, #77faae);
     animation: borderMove 5s linear infinite;
-    z-index: 0;
+    z-index: 0; /* Borde debajo de la imagen */
 }
 
 /* Animación del borde radial */
@@ -60,12 +68,48 @@ header {
     100% { transform: rotate(360deg); }
 }
 
-/* Posicionamiento del borde animado detrás de la imagen */
-.carousel-item {
-    position: relative;
-    display: flex;
-    justify-content: center;
+/* Estilo del texto sobre la imagen */
+.carousel-item .carousel-caption {
+    position: absolute;
+    bottom: 20px;  /* Ajusta la posición según sea necesario */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white !important;  /* Fuerza que el texto sea blanco */
+    z-index: 2;  /* Asegura que el texto esté por encima de la imagen */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);  /* Sombra de texto para mejor visibilidad */
+    width: 100%;  /* Asegura que el texto ocupe el 100% de ancho del contenedor */
+    text-align: center;
+
+    /* Fondo translúcido detrás del texto */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro con 50% de opacidad */
+    padding: 10px;  /* Espaciado interno para que no quede pegado al texto */
+    border-radius: 10px;  /* Bordes redondeados */
 }
+
+/* Ajustes responsivos */
+@media (max-width: 768px) { /* Tablet */
+    .carousel-item img {
+        height: 300px;
+        border-radius: 20px;
+    }
+    .carousel-item .border-animation {
+        border-radius: 25px;
+        padding: 4px;
+    }
+}
+
+@media (max-width: 576px) { /* Móviles */
+    .carousel-item img {
+        height: 250px;
+        border-radius: 15px;
+    }
+    .carousel-item .border-animation {
+        border-radius: 20px;
+        padding: 3px;
+    }
+}
+
+
 
 
 
