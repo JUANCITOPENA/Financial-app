@@ -227,11 +227,17 @@ cd financial-app
 ## 📝 Licencia
 Distribuido bajo la Licencia MIT. Ver `LICENSE` para más información.
 
-## 📧 Contacto
-- 👨‍💻 Desarrollador: [Tu Nombre]
-- 📧 Email: tu@email.com
-- 🌐 Website: [tu-sitio-web.com](https://tu-sitio-web.com)
-- 🐱 GitHub: [@tu-usuario](https://github.com/tu-usuario)
+## 📱 Contacto y Redes Sociales
+
+¿Quieres saber más sobre este proyecto o contactar con el desarrollador? ¡Encuéntrame en cualquiera de estas plataformas!
+
+- 🎬 Youtube: [youtube.com/channel/UCSob-3E5z4IHtMF5B4bN-FA](https://www.youtube.com/channel/UCSob-3E5z4IHtMF5B4bN-FA)
+- 👨‍💼 LinkedIn: [linkedin.com/in/juancitopena](https://www.linkedin.com/in/juancitope%C3%B1a/)
+- 📷 Instagram: [instagram.com/juancito.pena.v](https://www.instagram.com/juancito.pena.v/)
+- 📑 Facebook: [facebook.com/juancito.p.v](https://www.facebook.com/juancito.p.v)
+- 🐦 Twitter: [twitter.com/JuancitoPenaV](https://twitter.com/JuancitoPenaV)
+- 📧 Email: juancito.pena@gmail.com
 
 ---
 ⭐️ ¡Si este proyecto te fue útil, no olvides darle una estrella en GitHub!
+---
