@@ -57,7 +57,7 @@ financial-app/
 
 1. **Clonar el Repositorio**
 ```bash
-git clone https://github.com/usuario/financial-app.git
+git clone https://github.com/JUANCITOPENA/Financial-app.git
 cd financial-app
 ```
 
